@@ -1,0 +1,89 @@
+Code1
+object revandupp {
+    def main(args: Array[String]): Unit = {
+        val string = "https://www.google.com"
+         val requiredStringFormat = string.reverse.toUpperCase()
+         println(s"$requiredStringFormat")
+	}
+}
+
+Code2
+object json{
+    def main(args: Array[String]): Unit = {
+    val donutName = "Vanilla Donut"
+    val quantityPurchased = 10
+    val price = 2.50
+    val reqop =
+    s"""
+       |{
+       |"donut_name":"$donutName",
+       |"quantity_purchased":"$quantityPurchased",
+       |"price":$price$$
+       |}
+      """.stripMargin
+    println(reqop)
+	}
+  }
+
+Code3
+import scala.io.StdIn._
+object nameandage{
+    def main(args: Array[String]): Unit = {
+    val name = readLine("Enter your name: ")
+    println("Enter your age: ")
+    val age = readInt()
+    println(s"Name: $name")
+    println(s"Age: $age") 
+	}
+}
+
+Code4
+object char8 {
+    def main(args: Array[String]): Unit = {
+	    val string = "http://www.google.com"
+		val charat8 = string.charAt(7)
+		println(s"The 8th character literal in $string = $charat8")
+	}
+}
+        
+Code5
+object totalcost {
+    def main(args: Array[String]): Unit = {
+	    val glazedDonut = "Glazed Donut"
+        val unitPrice = 2.50
+        val qtyPurchased = 10
+        val totalCost = qtyPurchased * unitPrice
+        println(f"""Total cost of $qtyPurchased $glazedDonut${if (qtyPurchased > 1) "s" else ""} = $$$totalCost%1.2f""")
+	    }
+}
+      
+Code6
+import scala.io.StdIn._
+object fav {
+    def main(args: Array[String]): Unit = {    
+    var favMovie = readLine("What is your favorite movie of all times?")
+    println(s"$favMovie is totally awesome!")
+	}
+}
+
+Code7
+object couponcode {
+    def main(args: Array[String]): Unit = {
+        val couponcodes = Seq("A", "BB", "CCC", "DDDD", "EEEEE")
+        val required_format = couponcodes.map { i =>s"$i - ${i.length}"}
+		println(s"Coupon code in the required format: ")
+        required_format.foreach(print(_))
+	}
+}	
+
+Code8
+object sumoflistele {
+    def main(args: Array[String]): Unit = {
+        val listRange = List.range(100, 150, 10)
+		println(s"Elements of List = $listRange")
+        val listRangeAsStr = listRange.mkString(", ")
+        println(s"Elements of List from 100 to 150, excluding the 150 number literal = $listRangeAsStr")
+        println(s"Sum of elements in the List = ${listRange.sum}")
+	}
+}
+
